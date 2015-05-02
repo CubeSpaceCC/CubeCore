@@ -1,14 +1,14 @@
 local files = {
-	"https://raw.githubusercontent.com/CubeSpaceCC/CubeCore/master/startup.lua"
-	"https://raw.githubusercontent.com/CubeSpaceCC/CubeCore/master/monitor.lua"
-	"https://raw.githubusercontent.com/CubeSpaceCC/CubeCore/master/mon.lua"
-	"https://raw.githubusercontent.com/CubeSpaceCC/CubeCore/master/lock.lua"
-	"https://raw.githubusercontent.com/CubeSpaceCC/CubeCore/master/core.lua"
+	["startup.lua"] = "startup",
+	["monitor.lua"] = "monitor",
+	["mon.lua"] = "mon",
+	["lock.lua"] = "lock",
+	["core.lua"] = "core",
 }
 
-local githubUser    = ""
-local githubRepo    = ""
-local githubBranch  = ""
+local githubUser    = "CubeSpaceCC"
+local githubRepo    = "CubeCore"
+local githubBranch  = "master"
 
 local installerName = "CubeCore Installer" -- if you need one, this will replace "Installer for user/repo, branch branch"
 

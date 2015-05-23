@@ -38,7 +38,7 @@ while true do
   elseif id == 5657 and message == "riot" then
     cmd.setCommand("sudo @a c:ヽ༼ຈل͜ຈ༽ﾉ &aR&bI&cO&dT&e!&d ヽ༼ຈل͜ຈ༽ﾉ")
     cmd.runCommand()
-    say("ヽ༼ຈل͜ຈ༽ﾉ &aR&bI&cO&dT&e!&d ヽ༼ຈل͜ຈ
+    say("ヽ༼ຈل͜ຈ༽ﾉ &aR&bI&cO&dT&e!&d ヽ༼ຈل͜ຈ༽ﾉ")
   elseif id == 5657 and message == "cara" then
     disk.playAudio("back")
   elseif id == 5657 and message == "stopmusic" then

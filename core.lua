@@ -1,6 +1,8 @@
-rednet.open("front")
-cmd = peripheral.wrap("left")
+ 
+cmd = peripheral.find("command")
+os.loadAPI("/jnet")
 term.clear()
+jnet.open()
 term.setCursorPos(1,1)
 print("CubeCore v1")
 print("Coded by MCFunRide")
@@ -8,13 +10,15 @@ print("All Rights Reserved.")
 print()
 print("Core Ready")
 mon = peripheral.wrap("right")
-shell.run("bg monitor right mon")
+shell.run("bg monitor monitor_173 mon")
  
 function say(string)
-  cmd.setCommand("say "..string)
+  cmd.setCommand("sudo @a ping &d[&c&lGLa&4&lDoS&d] "..string)
   cmd.runCommand()
 end
-cmd = peripheral.wrap("left")
+ 
+say("Test")
+cmd = peripheral.find("command")
  
 function command(data)
   cmd.setCommand(data)
@@ -22,22 +26,25 @@ function command(data)
 end
  
 while true do
-  local id, message = rednet.receive()
-  if id == 17 and message == "reboot" then
+  local id, message = jnet.receive()
+  if id == 5657 and message == "reboot" then
     say("Rebooting...")
     sleep(3)
     os.reboot()
-  elseif id == 17 and message == "shutdown" then
+  elseif id == 5657 and message == "shutdown" then
     say("Shutting down...")
     sleep(3)
     os.shutdown()
-  elseif id == 17 and message == "riot" then
-    cmd.setCommand("sudo @a c:&dヽ༼ຈل͜ຈ༽ﾉ &aR&bI&cO&dT&e! &dヽ༼ຈل͜ຈ༽ﾉ")
+  elseif id == 5657 and message == "riot" then
+    cmd.setCommand("sudo @a c:ヽ༼ຈل͜ຈ༽ﾉ &aR&bI&cO&dT&e!&d ヽ༼ຈل͜ຈ༽ﾉ")
     cmd.runCommand()
-  elseif id == 17 and message == "cmd" then
-  command(message)
+    say("ヽ༼ຈل͜ຈ༽ﾉ &aR&bI&cO&dT&e!&d ヽ༼ຈل͜ຈ
+  elseif id == 5657 and message == "cara" then
+    disk.playAudio("back")
+  elseif id == 5657 and message == "stopmusic" then
+    disk.stopAudio("back")
   else
-    if id == 17 then
+    if id == 5657 then
       say(message)
     end
   end
